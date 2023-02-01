@@ -17,7 +17,7 @@ from logging.handlers import RotatingFileHandler
 from sys import exit
 import urllib.request
 import dotenv
-import telegram.ext as tg
+from telegram.ext import Updater as tgUpdater
 
 from pyrogram import Client
 
@@ -230,6 +230,7 @@ if STRING_SESSION:
     userBot = Client("Tele-UserBot", api_id=APP_ID, api_hash=API_HASH, session_string=STRING_SESSION)
     LOGGER.info("[PRM] Initiated USERBOT") #Logging is Needed Very Much
 
-updater = tg.Updater(token=TG_BOT_TOKEN)
+#updater = tg.Updater(token=TG_BOT_TOKEN)
+updater = tgUpdater(token=TG_BOT_TOKEN, request_kwargs={'read_timeout': 20, 'connect_timeout': 15})
 bot = updater.bot
 dispatcher = updater.dispatcher
