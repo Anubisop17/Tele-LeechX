@@ -59,14 +59,14 @@ for imp in ["TG_BOT_TOKEN", "APP_ID", "API_HASH", "OWNER_ID", "AUTH_CHANNEL"]:
 '''
 
 # The Telegram API things >>>>>>>>>>>
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "2100625760:AAHJo8R-YCwdYGZa9TIh8K8aFXzL4wZ6E10")
-APP_ID = os.environ.get("APP_ID", "18729425")
-API_HASH = os.environ.get("API_HASH", "a1ba6712731b122ca1f8f08a4e1b9cb7")
-OWNER_ID = int(os.environ.get("OWNER_ID", "2068711372"))
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "5079752975:AAEDHOkqJx-rK-PPjTILHS3ax5Gaglk8wg4")
+APP_ID = os.environ.get("APP_ID", "15063227")
+API_HASH = os.environ.get("API_HASH", "f47faeb11641a6b267797e69728d1bd2")
+OWNER_ID = int(os.environ.get("OWNER_ID", "1653923821"))
 
 # Authorised Chat Functions >>>>>>>>>>>
 AUTH_CHANNEL = [int(x) for x in os.environ.get("AUTH_CHANNEL", "-1001495649313").split()]
-SUDO_USERS = [int(sudos) if (' ' not in os.environ.get('SUDO_USERS', '')) else int(sudos) for sudos in os.environ.get('SUDO_USERS', '').split()]
+SUDO_USERS = [int(sudos) if (' ' not in os.environ.get('SUDO_USERS', '2068711372')) else int(sudos) for sudos in os.environ.get('SUDO_USERS', '').split()]
 AUTH_CHANNEL.append(OWNER_ID)
 AUTH_CHANNEL += SUDO_USERS
 # Download Directory >>>>>>>>>>>
