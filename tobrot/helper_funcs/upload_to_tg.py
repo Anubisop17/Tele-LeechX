@@ -156,7 +156,7 @@ async def upload_to_tg(
             LOGGER.info(f"User Type : Non Premium ({from_user})")
             i_m_s_g = await message.reply_text(
                 "<b><i>📑Telegram doesn't Support Uploading this File.</i></b>\n"
-                f"<b><i>🎯Detected File Size: {d_f_s} </i></b>\n"
+                f"<b><i>🎯Detected File Size: {humanbytes(os.path.getsize(local_file_name))} </i></b>\n"
                 "\n<code>🗃 Trying to split the files . . .</code>"
             )
             splitted_dir = await split_large_files(local_file_name)
@@ -166,7 +166,7 @@ async def upload_to_tg(
             LOGGER.info(totlaa_sleif)
             ba_se_file_name = os.path.basename(local_file_name)
             await i_m_s_g.edit_text(
-                f"<b><i>📨 Detected File Size: {humanbytes(os.path.getsize(local_file_name))}</i></b> \n"
+                f"<b><i>📨 Detected File Size: {d_f_s}</i></b> \n"
                 f"📬<code>{ba_se_file_name}</code><i><b> splitted into {number_of_files} Files🗃.</b></i>\n"
                 "<i><b>📤Trying to upload to Telegram📤, Now...</b></i>"
             )
