@@ -21,8 +21,8 @@ from telegram.ext import Updater as tgUpdater
 
 from pyrogram import Client
 
-if os.path.exists("KUMBHIPAAKAMLogs.txt"):
-    with open("KUMBHIPAAKAMLogs.txt", "r+") as f_d:
+if os.path.exists("FuZionXLogs.txt"):
+    with open("FuZionXLogs.txt", "r+") as f_d:
         f_d.truncate(0)
 
 # the logging things >>>>>>>>>>>
@@ -32,7 +32,7 @@ logging.basicConfig(
     datefmt="%d-%b-%y %H:%M:%S",
     handlers=[
         RotatingFileHandler(
-            "KUMBHIPAAKAMLogs.txt", maxBytes=50000000, backupCount=10
+            "FuZionXLogs.txt", maxBytes=50000000, backupCount=10
         ),
         logging.StreamHandler(),
     ],
